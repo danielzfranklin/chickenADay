@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block signup %}{% endblock %}
+
+{% block content %}
+	<p id="mainMessage">
+		Hello {{ name }},
+		<br><br>
+		Thanks for signing up.
+		<br><br>
+		Check your inbox for a confirmation email sent to {{ email }}. There will be a link to click on to complete the signup.
+		<br><br>
+		If you ever want to (gasp) stop recieving my wonderful chicken pictures, you can go to chickenaday.appspot.com/unsubscribe, or click on the unsubscribe link at the bottom of every email.
+		<br><br>
+		Enjoy the chicken photos,
+		<br><br>
+		Daniel
+	</p>
+{% endblock %}

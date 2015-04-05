@@ -10,11 +10,17 @@
 	</head>
 	<body>
 		<div id="header" unselectable="on">
-			<a href="/account"><span class="signup">Signup</span></a>
-			<span class="name">Chicken A Day</span>
+			{# putting it in a block means that it can be disabled easily with simply {% block signup %}{% endblock %} on any template #}
+			{% block signup %}<a href="/account"><span class="signup">Signup</span></a>{% endblock %}
+			<a href="/" class="name"><span class="name">Chicken A Day</span></a>
 		</div>
 		<div id="content" class="smallNav">
 			{% block content %}{% endblock %}
+		</div>
+		<div id="footer">
+			<a href="/terms">Terms of Use</a>
+			<a href="/privacy">Privacy Policy</a>
+			<a href="{{ signout }}" class="signout">Signout</a>
 		</div>
 	</body>
 </html>

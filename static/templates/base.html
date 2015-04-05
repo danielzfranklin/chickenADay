@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name=“viewport” content="initial-scale=1.0">
+		
+		<title>{% block title %}{% endblock %} | Chicken A Day</title>
+		
+		<link rel="stylesheet" type="text/css" href="/static/stylesheets/defaults.css">
+		<link rel="stylesheet" type="text/css" href="/static/stylesheets/theme.css">
+	</head>
+	<body>
+		<div id="header" unselectable="on">
+			<a href="/account"><span class="signup">Signup</span></a>
+			<span class="name">Chicken A Day</span>
+		</div>
+		<div id="content" class="smallNav">
+			{% block content %}{% endblock %}
+		</div>
+	</body>
+</html>

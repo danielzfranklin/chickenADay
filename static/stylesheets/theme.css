@@ -24,14 +24,84 @@ body {
 	height: 16px;
 	
 	background-color: hsla(226, 40%, 50%, 1);
-	color: hsla(226, 10%, 80%, 1)
+	color: hsla(226, 10%, 80%, 1);
+}
+.inline.signup{
+	margin: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	float: none;
+	width: 60px;
+	
+	text-decoration: none;
+	text-align: center;
+}
+a.inline.signup{
+	margin:0;
+	padding:0;
+	float:none;
+	height:auto;
+	width:auto;
+	background-color: none;
+	
+	color: hsla(226, 10%, 80%, 1);
 }
 
 .name {
 	font-size: 55px;
 	color: hsla(226, 20%, 80%, 1)
 }
+@media (max-width: 520px) {
+	.name{
+		font-size: 40px;
+	}
+}
+@media (max-width: 420px) {
+	.name{
+		font-size: 30px;
+	}
+}
 
 #content.smallNav{
 	margin-top: 110px;
+}
+#content{
+	padding: 20px;
+	width: calc(100% - 40px);
+	max-width: 800px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+	font-size: 20px;
+}
+
+.inlineSignup {
+	text-align: center;
+}
+.inlineSignup span{
+	text-align: center;
+}
+
+#mainImage {
+	margin-left: auto;
+	margin-right: auto;
+	
+	margin-top: 70px;
+	margin-bottom: 70px;
+	width: calc(100% - 20px);
+}
+#mainImage img{
+	height: inherit;
+	width: inherit;
+}
+
+.caption {
+	text-align: center;
+	color: hsla(226, 60%, 30%, 1);
+	
+	font-size: 15px;
+}
+.caption a{
+	color: hsla(226, 60%, 40%, 1);
 }

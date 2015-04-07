@@ -1,7 +1,11 @@
 from google.appengine.ext import ndb
 
 class User(ndb.Model):
+    uid = ndb.StringProperty()
     email = ndb.StringProperty()
     name = ndb.StringProperty()
 
-    optinComplete = ndb.BooleanProperty()
+    confirmed = ndb.BooleanProperty()
+
+class General(ndb.Expando):
+    key = ndb.StringProperty()

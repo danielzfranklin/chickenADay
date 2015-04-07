@@ -1,0 +1,10 @@
+cron:
+- description: Update the chicken of the day to a new chicken
+  url: /image/store
+  timezone: America/Los_Angeles
+  schedule: every day 11:00
+
+- description: Send the daily email
+  url: /send
+  timezone: America/Los_Angeles
+  schedule: every day 00:00

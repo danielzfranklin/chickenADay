@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Unsubscribe{% endblock %}
+{% block content %}
+	<p id="mainMessage">
+		{% if result == "noEmail" %}
+			Hello,
+			<br><br>
+			I'm sorry to see you go, but if you want to unsubscribe just enter your email.
+			<br><br>
+			I would appreciate it if you addressed any complaints or comments to <a href="http://www.google.com/recaptcha/mailhide/d?k=01KyObK9qHbPGdhFPgCcxyRg==&amp;c=bIPlUHQNC9OozC0TiP9tw6YdSxVG82Gl0v0jt0QApFE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501KyObK9qHbPGdhFPgCcxyRg\75\75\46c\75bIPlUHQNC9OozC0TiP9tw6YdSxVG82Gl0v0jt0QApFE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">d...</a>@openmailbox.org.
+			<br><br>
+			Daniel
+		{% endif %}
+		
+		{% if result == "noRecord" %}
+			Hello,
+			<br><br>
+			I'm sorry, but we don't have a record for {{ email }}. Have you already unsubscribed?
+			<br><br>
+			If this is an error, please let me know at <a href="http://www.google.com/recaptcha/mailhide/d?k=01KyObK9qHbPGdhFPgCcxyRg==&amp;c=bIPlUHQNC9OozC0TiP9tw6YdSxVG82Gl0v0jt0QApFE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501KyObK9qHbPGdhFPgCcxyRg\75\75\46c\75bIPlUHQNC9OozC0TiP9tw6YdSxVG82Gl0v0jt0QApFE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">d...</a>@openmailbox.org.
+			<br><br>
+			If {{ email }} is not your email, you can use the form below unsubscribe.
+			<br><br>
+			Daniel
+		{% endif %}
+		
+		{% if result == "noRecord" or result == "noEmail" %}
+			<br><br>
+			<form action="/unsubscribe" method="get">
+				<input type="email" name="email" id="email" placeholder="Enter your email address">
+				<input type="submit" value="Submit">
+			</form>
+		{% endif %}
+		
+		{% if result == "success" %}
+			Hello {{ name }},
+			<br><br>
+			You have successfully unsubscribed from all Chicken A Day emails.
+			<br><br>
+			If you would like, I would appreciate if you sent me an email at <a href="http://www.google.com/recaptcha/mailhide/d?k=01KyObK9qHbPGdhFPgCcxyRg==&amp;c=bIPlUHQNC9OozC0TiP9tw6YdSxVG82Gl0v0jt0QApFE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501KyObK9qHbPGdhFPgCcxyRg\75\75\46c\75bIPlUHQNC9OozC0TiP9tw6YdSxVG82Gl0v0jt0QApFE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">d...</a>@openmailbox.org and told me what went wrong.
+			<br><br>
+			Until we meet again,
+			<br><br>
+			Daniel
+			<br><br>
+			(P.S: There is a register button at the top of the page longing to be clicked if you made a mistake)
+		{% endif %}
+	</p>
+{% endblock %}

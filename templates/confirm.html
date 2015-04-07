@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Confirm{% endblock %}
+
+{% block signup %}{% endblock %}
+
+{% block content %}
+	<p id="mainMessage">
+	{% if success %}
+		Hello {{ name }},
+		<br><br>
+		Thanks for signing up. You should recieve your first chicken email at twelve o'clock Pacific Time today (and hopefully read it a bit after that).
+		<br><br>
+		If you ever want to unsubscribe, you can go to chickenaday.appspot.com/unsubscribe, or click on the link at the bottom of the Chicken A Day email.
+		<br><br>
+		Enjoy,
+		<br><br>
+		Daniel
+	{% else %}
+		Sorry,
+		<br><br>
+		Some sort of error occured, and we can't find you in the database.
+		<br><br>
+		This shouldn't be happening.
+		<br><br>
+		Try signing up again, and if that doesn't work email me at <a href="http://www.google.com/recaptcha/mailhide/d?k=01KyObK9qHbPGdhFPgCcxyRg==&amp;c=bIPlUHQNC9OozC0TiP9tw6YdSxVG82Gl0v0jt0QApFE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501KyObK9qHbPGdhFPgCcxyRg\75\75\46c\75bIPlUHQNC9OozC0TiP9tw6YdSxVG82Gl0v0jt0QApFE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">d...</a>@openmailbox.org.
+		<br><br>
+		Sorry about the technical difficulties,
+		<br><br>
+		Daniel
+	{% endif %}
+	</p>
+{% endblock %}

@@ -19,12 +19,30 @@ handlers:
 - url: /account
   script: account.app
   login: required
+
+- url: /confirm
+  script: account.app
+
+- url: /unsubscribe
+  script: account.app
   
 - url: /send
   script: send.app
+
+- url: /image/store
+  script: photo.app
+  login: admin
   
-- url: .*
-  script: main.app
+- url: /image/.*
+  script: photo.app
+  
+  
+- url: /terms
+  script: general.app
+- url: /privacy
+  script: general.app
+- url: /reportBad
+  script: general.app
 
 libraries:
 - name: webapp2

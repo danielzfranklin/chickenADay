@@ -28,6 +28,7 @@ handlers:
   
 - url: /send
   script: send.app
+  login: admin
 
 - url: /image/store
   script: photo.app

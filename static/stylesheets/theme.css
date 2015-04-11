@@ -67,11 +67,10 @@ a.name{
 }
 
 #content.smallNav{
-	padding-top: 110px;
+	padding-top: 150px;
 }
 #content{
 	padding: 20px;
-	padding-bottom: 110px; /*compensate for the footer so that it doesn't overflow */
 	width: calc(100% - 60px);
 	max-width: 800px;
 	
